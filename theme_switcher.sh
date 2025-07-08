@@ -96,7 +96,7 @@ get_current_theme() {
 # 切換到淺色主題
 switch_to_light_theme() {
     osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to false'
-    enable_true_tone
+    disable_true_tone
 
     log_message "已切換到淺色主題"
 }
@@ -104,7 +104,7 @@ switch_to_light_theme() {
 # 切換到深色主題
 switch_to_dark_theme() {
     osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
-    disable_true_tone
+    enable_true_tone
 
     log_message "已切換到深色主題"
 }
